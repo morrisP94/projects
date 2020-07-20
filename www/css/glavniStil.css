@@ -1,0 +1,193 @@
+#dohvati {
+    height:40px; 
+    width:200px; 
+    top:50%; 
+    left:40%;
+    font-size: 18px;
+}
+
+label {
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#uredi {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 20px;
+}
+#sredi {
+    
+    width: 30%;
+}
+
+
+#but {
+    margin-top: 30px;
+    width: 300px;
+    height: 50px;
+}
+#but > button {
+    display: inline-block;
+    left:150%;
+    height: 50px;
+}
+#blok > button {
+    width: 150px;
+    left:40%;
+    margin-top: 40px;
+}
+
+#prikaz1 {
+
+    margin-left: 50px;
+}
+textarea {
+    resize: none;
+}
+
+.abc {
+
+    width: 200%;
+}
+
+
+#a, #b {
+    margin-left:auto;
+    margin-right:auto;
+    
+    display:inline-block;
+}
+#blok {
+        display:block;
+        
+}
+
+#blok1 {
+    width:40%;
+    
+    
+}
+.smanji {
+    width: 10%;
+}
+
+#b {
+    float: right;
+
+    
+}
+
+#sastojciRecepta {
+    width: 470px;
+    height: 40px;
+}
+#mjere {
+
+    width: 470px;
+    height: 40px;
+}
+
+
+.first {
+    position: absolute;
+    float: left;
+    margin-top: 100px;
+    width: 300px;
+}
+
+
+.first > button {
+    
+    display: inline-block;
+    left:160%;
+    height: 70px;
+    font-size: 18px;
+}
+
+.pomakniLijevo {
+
+    width: 200%;
+}
+#ubaci {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+.radio-inline {
+    width: 15%;
+}
+
+.sredi {
+    margin-top: 50px;
+    width: 40%;
+    
+}
+
+
+#fInput {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h1 {
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    font-size: 50px;
+}
+h2 {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+#opis {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.slika {
+    background-image: url("https://2rt9loawzcmbvlze40mhj9n0-wpengine.netdna-ssl.com/wp-content/uploads/2018/10/cooking-offer.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+    
+}
+
+.slikaKategorija {
+    background-image: url("https://cdn.hipwallpaper.com/i/63/87/n3F40K.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+    
+}
+
+.slikaRecept {
+    background-image: url("https://cdn.hipwallpaper.com/i/82/81/TIO6Gj.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+
+
+}
+
+.slikaDodaj {
+    
+    background-image: url("https://cdn.hipwallpaper.com/i/35/13/03codE.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+.slikaSpremljeni {
+
+    background-image: url("https://cdn.hipwallpaper.com/i/17/87/6X1go0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 100% 100%;
+}
+
+
+
+
+
+
+
+
+

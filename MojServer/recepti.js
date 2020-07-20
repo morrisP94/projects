@@ -1,0 +1,1 @@
+//učitavanje baze podataka

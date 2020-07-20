@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- Link na CSS stil -->
+        <link href="css/glavniStil.css" type="text/css" rel="stylesheet" />
+        <!-- Link na JavaScript datoteku -->
+        <script type="text/javascript" src="js/main.js"></script>
+        <link rel="stylesheet"href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>FOOD RECIPES</title>
+
+    </head>
+    <body >
+
+      <div data-role = "page" class = "slika" id = "naslovna">
+
+        <div role = "main" class = "ui-content" > 
+
+          <div class ="first">
+
+            <button id = "reset2" class = "prviB" onclick = "location.href='#kategorije';"> Pronađi recept </button>
+            <button id = "spremljeno" class = "prviB" onclick = "location.href='#spremljeniRecepti';">Pogledaj spremljene recepte</button>
+            <button  id = "reset" class = "prviB" onclick = "location.href='#dodajRecept';">Dodaj novi recept</button>
+            
+          </div>
+
+        </div>
+        
+
+      </div>
+
+      <div data-role = "page" id ="dodajRecept" class = "slikaDodaj">
+
+        <H1>DODAJ RECEPT U KUHARICU</H1>
+     
+        <div role = "main" class = "ui-content">
+
+          <div id ="pos">
+            <form id = "resetForm1" class="sredi">
+
+              <label id = "fInput"> <b>Ime recepta:</b></label>
+              <input type = "text" id = "spremiIme" placeholder="Unesite ime recepta..." >
+  
+              <label id = "fInput"><b>Kategorija recepta:</b></label>
+
+              <select name="lista" id = "spremiKategoriju">
+                <option value = "Side">Side</option>
+                <option value = "Vegetarian">Vegetarian</option>
+                <option value = "Dessert">Dessert</option>
+                <option value = "Miscellaneous">Miscellaneous</option>
+                <option value = "Pasta">Pasta</option>
+                <option value = "Pork">Pork</option>
+                <option value = "Lamb">Lamb</option>
+                <option value = "Seafood">Seafood</option>
+                <option value = "Chicken">Chicken</option>
+                <option value = "Beef">Beef</option> 
+              </select>
+              
+  
+              <label id = "fInput"><b>Podrijetlo recepta:</b></label>
+              <input type = "text" id = "spremiPodrijetlo" placeholder="Unesite podrijetlo recepta..." >
+  
+              <label id = "fInput"><b>Način pripreme recepta:</b></label>
+              <textarea style = "resize: none" id ="spremiPriprema" row = 20 placeholder="Opišite način pripreme..."></textarea>
+  
+              <label id = "fInput"><b>Potrebni sastojci za recept:</b></label>
+              <textarea style = "resize: none" id ="spremiSastojci" placeholder="Navedite potrebne sastojke..."></textarea>
+  
+              <label id = "fInput"><b>Mjere za pravljenje recepta:</b></label>
+              <textarea style = "resize: none" id ="spremiMjere" placeholder="Navedite potrebne mjere za recept..."></textarea>
+
+  
+            </form> 
+
+            <div id = "but">
+              <button  id = "spremi2" > Spremi recept </button>
+              <button  id = "back" onclick = "location.href='#naslovna';" > Nazad </button>
+            </div>
+
+          </div>
+          
+        </div>
+
+      </div>
+      <div data-role = "page" id ="spremljeniRecepti" class = "slikaSpremljeni">
+
+        <h1>MOJI SPREMLJENI RECEPTI</h1>
+
+        <div role = "main" class = "ui-content">
+
+          <p id ="uredi"> <b>Lista  spremljenih recepata:</b> </p>
+
+          <div id ="sredi">
+            <select name="lista" id = "listaSpremljeni">
+            
+            </select>
+          </div>
+          
+
+          <div id = "but">
+            <button id ="prikaziRecept">Pokaži podatke o receptu</button>
+          </div>
+          
+
+          <div id ="prikazi3" >
+
+            <form id = "resetForm2" class="pomakniLijevo">
+
+              <label id = "uredi"> <b>Ime recepta:</b></label>
+              <input type = "text" id = "receptSpremljeno" >
+  
+              <label id = "uredi"><b>Kategorija:</b></label>
+              <input type = "text" id = "receptKategorija" >
+  
+              <label id = "uredi"><b>Podrijetlo recepta:</b></label>
+              <input type = "text" id = "receptPodrijetlo" >
+  
+              <label id = "uredi"><b>Način pripreme recepta:</b></label>
+              <textarea style = "resize: none" readonly id ="receptPriprema" row = 20></textarea>
+
+              <label id = "uredi"><b>Potrebni sastojci za recept:</b></label>
+              <textarea style = "resize: none" readonly id ="receptSastojci" ></textarea>
+  
+              <label id = "uredi"><b>Mjere za pravljenje recepta:</b></label>
+              <textarea style = "resize: none" readonly id ="receptMjere"></textarea>
+
+            </form> 
+            <div id = "but">
+              <button id = "obrisi">Izbriši recept</button>
+              <button  id = "back" onclick = "location.href='#naslovna';" > Nazad </button>
+            </div>
+            
+
+          </div>
+         
+        </div>
+
+
+      </div>
+      
+        <div data-role = "page" class = "slikaKategorija" id = "kategorije">
+          
+          <H1 style="text-align: center;"> PRONAĐI RECEPT </H1>
+        
+          <div role = "main" class = "ui-content">
+
+            
+            <h2>Odaberi kategoriju na temelju koje ćeš pretražiti recepte:</h2>
+
+            
+              <form>
+
+                <label class="radio-inline">
+                    <input type ="radio" name = "category" value = "BY COUNTRY"> Recept prema podrijetlu
+                  </label> 
+                <label class="radio-inline">
+                  <input type ="radio" name = "category" value = "BY TYPE"> Recept prema tipu hrane
+                </label>
+                
+      
+              </form>
+
+            <button id="dohvati" >Dalje</button>
+            <button id = "dohvati" onclick = "location.href='#naslovna';"> Nazad </button>
+
+            
+            <div id = "prikaz" >
+
+              <p id ="opis"> </p>
+              <select name="lista" id = "listOfItems">
+              
+              </select>
+
+            <button  id ="dohvatiRecepte" > Pronađi recepte </button>
+
+            </div>
+          
+            <div id = "prikaz1" >
+
+              <p style = "font-size: 20px;"><b>Lista recepta:</b> </p>
+              <select name="lista" id = "recipes">
+                
+              </select>
+
+          
+             <button  id ="pogledajRecept" onclick = "location.href='#drugaStranica';">  Pogledaj recept </button>
+
+            </div>
+          
+        </div>
+
+      </div>
+
+
+        <div data-role = "page" id = "drugaStranica" class ="slikaRecept">
+
+          <h1 id ="rec" style = "text-align: center;">RECEPT</h1>
+
+          <div role = "main" class = "ui-content">
+            
+            <div id="a" >
+
+              <form class="abc">
+                <label id = "fInput"> <b>Ime recepta:</b></label>
+                <input type = "text" id = "imeRecepta" readonly>
+  
+                <label id = "fInput"><b>Kategorija:</b></label>
+                <input type = "text" id = "kategorijaRecepta"readonly >
+  
+                <label id = "fInput"><b>Podrijetlo recepta:</b></label>
+                <input type = "text" id = "podrijetloRecepta" readonly>
+  
+                <label id = "fInput"><b>Način pripreme recepta:</b></label>
+                <textarea style = "resize: none" readonly id ="pripremaRecepta" row = 20></textarea>
+
+              </form> 
+          
+            </div>
+            
+            <div id ="b">
+
+              <div id="blok">
+              <iframe id = "video" src = "" width="600" height="315" frameborder="0"  ></iframe>
+
+              <!-- Ocjenjivanje recepta-->
+              <h2 style = "text-align: center;" style="font-size: 30px;">OCJENI RECEPT</h2>
+              
+              <div id= "blok1">
+
+              <label id = "fInput">Unesi nadimak:</label>
+              <input type = "text" id = "nadimak" placeholder="Unesite nadimak...">
+
+              <label id = "fInput">Odaberi ocjenu:</label>
+
+              <select name="lista" id = "listaOcjena">
+                <option value = "1">1</option>
+                <option value = "2">2</option>
+                <option value = "3">3</option>
+                <option value = "4">4</option>
+                <option value = "5">5</option>
+
+              </select>
+            </div>
+              <button id="posaljiOcjenu">Ocjeni recept</button>
+
+              <div id ="blok1">
+                <p id ="ubaci">PROSJEČNA OCJENA RECEPTA JE:</p>
+              </div>
+
+            </div>
+            </div>
+                      
+            <label id = "fInput"><b>Potrebni sastojci za recept:</b></label>
+            <textarea style = "resize: none" id ="sastojciRecepta"readonly ></textarea>
+
+            <label id = "fInput"><b>Mjere za pravljenje recepta:</b></label>
+            <textarea style = "resize: none" readonly id ="mjere"></textarea>
+
+            
+
+            <div id = "but">
+              <button  id = "spremi">Spremi recept u kuharicu </button>
+              <button  onclick = "location.href='#kategorije';">Pronađi drugi recept</button>
+              <button  onclick = "location.href='#naslovna';">Povratak na naslovnu stranicu</button>
+            </div>
+           
+          </div> 
+
+
+        </div>
+
+        
+    </body>
+</html>
